@@ -3,17 +3,17 @@ using System.Collections;
 
 public class movement : MonoBehaviour {
 
-	public bool selected;
+	public bool isSelected;
 
 	public float moveSpeed;
 	private Vector2 move;
 
 	// Use this for initialization
 	void Start () {
-		selected = false;
+		isSelected = false;
 		rigidbody2D.isKinematic = true;
 		if (gameObject.CompareTag ("player")) {
-			selected = true;
+			isSelected = true;
 			rigidbody2D.isKinematic = false;
 		}
 		moveSpeed = 5.0f;
@@ -29,7 +29,7 @@ public class movement : MonoBehaviour {
 	bool sync = false;
 
 	void OnMouseDown() {
-		selected = true;
+		isSelected = true;
 		rigidbody2D.isKinematic = false;
 		sync = true;
 	}
@@ -57,7 +57,7 @@ public class movement : MonoBehaviour {
 			move.y += -moveSpeed;
 		}
 
-		if(selected){
+		if(isSelected){
 			rigidbody2D.velocity = move;
 		} /*else if (collide) {
 			rigidbody2D.velocity = -move;
@@ -71,7 +71,7 @@ public class movement : MonoBehaviour {
 	void Update () {
 		if(Input.GetMouseButtonDown(0) && !sync){
 			//Debug.Log ("offclick");
-			selected = false;
+			isSelected = false;
 			rigidbody2D.isKinematic = true;
 		}
 		sync = false;

@@ -12,6 +12,14 @@ public class movement : MonoBehaviour {
 		move = new Vector2 (0.0f, 0.0f);
 	}
 
+	void OnTriggerEnter2D(Collider2D other) {
+		Debug.Log ("Collision detected");
+	}
+
+	void OnColliderEnter2D(Collision other) {
+		Debug.Log ("Collision detected");
+	}
+
 	void FixedUpdate () {
 
 		move.x = 0.0f;

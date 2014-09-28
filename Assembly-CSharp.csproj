@@ -50,6 +50,7 @@
      <Compile Include="Assets\Telekinesis.cs" />
      <Compile Include="Assets\isControlable.cs" />
      <Compile Include="Assets\moveable.cs" />
+     <Compile Include="Assets\Scripts\telekinesis.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

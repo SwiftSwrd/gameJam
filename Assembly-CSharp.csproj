@@ -52,6 +52,7 @@
      <Compile Include="Assets\Scripts\Ramp.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\Scripts\telekinesis.cs" />
+     <Compile Include="Assets\text.cs" />
      <None Include="Assets\notes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

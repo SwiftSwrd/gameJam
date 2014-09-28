@@ -1,0 +1,43 @@
+Resource management puzzles
+	Limited number of moves
+	Limited number of obstacle passing tools
+		FFX orb puzzle
+
+Ice sliding puzzles
+	Heavily limit options at each individual decision point in a larger open environment
+
+Make only the end goal at the most basic level obvious
+	ex. even after you get the log, how to make it fall over so it's in the right place in the right way is the puzzle
+	
+Time based puzzles
+	Time to complete actions (which can not be sped up simply by the player moving the mouse faster or something) limiting the player
+
+Skill as a component, but not the entire focus
+	What to do with your skill
+		Angry birds
+		
+Tutorial
+	Puzzles that aren't puzzles at all
+		Presolved, just demonstrations of a mechanic
+
+State Puzzle
+	ex. rotating a triangle that takes up half a square tile
+		Triangle could affect something else, be impassable, etc.
+	extreme example: sudoku
+
+Physics Puzzle
+	Momentum
+
+Platform Puzzles
+	Holes, get to higher place, etc.
+	
+Timing Puzzles
+	Possibly just a subset of physics puzzles and skill puzzle - event will only occur desirably if the player takes certain actions at the right time
+
+Memory
+	It appears that there are players and devs who consider memorization a puzzle
+		Don't really agree with this, worth noting though
+
+Character state
+	Ex. the parasite in limbo, changing colour in the light game
+		Explanation example: Player is covered in some flammable substance, will burn in hot area but substance required to traverse another area somehow

@@ -4,18 +4,18 @@ using System.Collections;
 public class movement : MonoBehaviour {
 
 	public bool selected;
-	public GameObject current;
-
 
 	public float moveSpeed;
 	private Vector2 move;
 
 	// Use this for initialization
 	void Start () {
+		selected = false;
+		rigidbody2D.isKinematic = true;
 		if (gameObject.CompareTag ("player")) {
 			selected = true;
+			rigidbody2D.isKinematic = false;
 		}
-
 		moveSpeed = 5.0f;
 		move = new Vector2 (0.0f, 0.0f);
 	}
@@ -30,6 +30,7 @@ public class movement : MonoBehaviour {
 
 	void OnMouseDown() {
 		selected = true;
+		rigidbody2D.isKinematic = false;
 		sync = true;
 	}
 
@@ -71,6 +72,7 @@ public class movement : MonoBehaviour {
 		if(Input.GetMouseButtonDown(0) && !sync){
 			//Debug.Log ("offclick");
 			selected = false;
+			rigidbody2D.isKinematic = true;
 		}
 		sync = false;
 	}

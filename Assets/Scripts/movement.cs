@@ -20,58 +20,57 @@ public class movement : MonoBehaviour {
 		move = new Vector2 (0.0f, 0.0f);
 	}
 
-	bool collide = false;
-
-	void OnCollisionStay2D(Collision2D coll) {
+	void OnTriggerEnter2D(Collider2D other) {
 		Debug.Log ("Collision detected");
-		//collide = true;
 	}
-	bool sync = false;
+
+	void OnColliderEnter2D(Collision other) {
+		Debug.Log ("Collision detected");
+	}
+
+	void OnMouseUp() {
+		//selected = false;
+		Debug.Log ("1");
+	}
+
+	void OnMouseUpAsButton() {
+		//selected = true;
+		Debug.Log ("2");
+	}
 
 	void OnMouseDown() {
-		selected = true;
-		sync = true;
+		//selected = true;
+		Debug.Log ("3");
 	}
 
 
 
 	void FixedUpdate () {
-
-		move.x = 0.0f;
-		move.y = 0.0f;
-
-		if(Input.GetKey(KeyCode.D)) {
-			move.x += moveSpeed;
-		}
-		
-		if(Input.GetKey(KeyCode.A)) {
-			move.x += -moveSpeed;
-		}
-		
-		if(Input.GetKey(KeyCode.W)) {
-			move.y += moveSpeed;
-		}
-		
-		if(Input.GetKey(KeyCode.S)) {
-			move.y += -moveSpeed;
-		}
-
 		if(selected){
+			move.x = 0.0f;
+			move.y = 0.0f;
+
+			if(Input.GetKey(KeyCode.D)) {
+				move.x += moveSpeed;
+			}
+			
+			if(Input.GetKey(KeyCode.A)) {
+				move.x += -moveSpeed;
+			}
+			
+			if(Input.GetKey(KeyCode.W)) {
+				move.y += moveSpeed;
+			}
+			
+			if(Input.GetKey(KeyCode.S)) {
+				move.y += -moveSpeed;
+			}
+
 			rigidbody2D.velocity = move;
-		} else if (collide) {
-			rigidbody2D.velocity = -move;
-			collide = false;
-		} else {
-			rigidbody2D.velocity = new Vector2(0.0f,0.0f);
 		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetMouseButtonDown(0) && !sync){
-			//Debug.Log ("offclick");
-			selected = false;
-		}
-		sync = false;
 	}
 }
